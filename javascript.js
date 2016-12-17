@@ -1,3 +1,8 @@
+var apiClient = new ApiClient('http://localhost');
+var scheduleConverter = new ScheduleConverter([],5,13);
+
+//apiClient.getGroupSchedule("GroupA",scheduleConverter.convertJSONToArray); <-- example
+
 class scheduleManager {
   constructor(schedule) {
     this.schedule = [
