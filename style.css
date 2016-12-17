@@ -1,10 +1,10 @@
 body {
-	background-color: #7a9e35;
+	background-color: #333
 }
 
 label {
-    width: 100%;
-	font-size: 300%;
+  width: 100%;
+	font-size: 200%;
 }
 
 #wrapper {
@@ -12,8 +12,8 @@ label {
 	display: flex;
 	-webkit-justify-content: space-around;
 	justify-content: space-around;
-	margin: 20px;
 }
+
 #left {
 	width: 100%;
 	flex: 0 45% 45%;
@@ -24,39 +24,16 @@ label {
 	flex: 0 45% 45%;
 }
 
-p {
-	-webkit-transition: height 1s; /* For Safari 3.1 to 6.0 */
-    transition: height 1s;
-}
-
 .labelClass {
-	background-color: #7a9e35;
+	background-color: #999;
 	text-align: left;
-	border: 1px solid #46650B;
+	border: 1px solid #000;
 	cursor:pointer;
-	-webkit-transition: linear 0.3s; /* Safari */
-    transition: linear 0.3s;
-	color: #46650B;
-}
-
-.labelClass.color {
-	background-color: #46650B;
-	color: #7a9e35;
-}
-
-#schedule {
-}
-
-.navbar {
-
+	color: #000;
 }
 
 @media only screen and (orientation : portrait) {
 	#wrapper {
 		display: inline;
 	}
-}
-
-@media (min-width: 768px) {
-
 }
