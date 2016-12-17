@@ -1,0 +1,19 @@
+<?xml version='1.0' ?>
+
+<schedule>
+  <day name="monday">
+    <lesson start="8">Historia</lesson>
+    <lesson start="9">Mata</lesson>
+    <lesson start="10">Polaj</lesson>
+  </day>
+  <day name="tuesday">
+    <lesson start="8">Historia</lesson>
+    <lesson start="9">Mata</lesson>
+    <lesson start="10">Polaj</lesson>
+  </day>
+  <day name="wednesday">
+    <lesson start="8">Historia</lesson>
+    <lesson start="9">Mata</lesson>
+    <lesson start="10">Polaj</lesson>
+  </day>
+</schedule>
