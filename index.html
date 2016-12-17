@@ -3,46 +3,77 @@
 	<head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
-		<title>Plan zajęć</title>
-		<link rel="stylesheet" href="bootstrap.css">
+		<title>Schedule</title>
+        <link rel="stylesheet" href="bootstrap.css">
         <link rel="stylesheet" href="style.css">
+		
         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 		<script type="text/javascript" src="javascript.js"></script>
 	</head>
-	<body bgcolor="#ffff00" onload="">
-        <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
-            <a class="navmenu-brand" href="#">Brand</a>
-            <ul class="nav navmenu-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-            </ul>
-        </nav>
-        <div class="navbar navbar-default navbar-fixed-top">
-            <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
-	<div class="navbar navbar-inverse navbar-fixed-side navbar-fixed-side-left" role="navigation" id="menu">
-		<div class="container-fluid">
-			<div class="navbar-header">
-			  <a class="navbar-brand">Lesson schedule</a>
-			</div>
-			<ul class="nav navbar-nav">
-			  <li id="menuMonday" class="active"><a href="#">Monday</a></li>
-			  <li id="menuTuesday"><a href="#">Tuesday</a></li>
-			  <li id="menuWednesday"><a href="#">Wednesday</a></li>
-			  <li id="menuThursday"><a href="#">Thursday</a></li>
-			  <li id="menuFriday"><a href="#">Friday</a></li>
-			</ul>
-			
-		</div>
-	</div>
-        <div id="schedule">
+	<body>
+		<div class="container">
 
-        </div>
+		<!-- Static navbar -->
+			<div class="navbar navbar-default">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand">Schedule</a>
+				</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="#">Link</a></li>
+					<li class="dropdown this-works">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Works <b class="caret"></b></i></a>
+						<div class="dropdown-menu dropdown-form">
+							<form class="form-inline" role="form">
+								<div class="input-group">
+									<input type="text" class="form-control" placeholder="Search" id="InputSearch" class="form-control">
+									<span class="input-group-btn">
+										<button class="btn btn-default" type="button">GO</button>
+									</span>
+								</div><!-- /input-group -->
+							</form>
+						</div>
+					</li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+
+	<section id="wrapper">
+		<div id="left" align="center">
+			<label class="labelClass" id="monday" onclick="showSchedule(this.id)">
+				<p>Monday</p>
+				<p class="hidden" id="mondaySchedule"></p>
+			</label><br>
+			<label class="labelClass" id="tuesday" onclick="showSchedule(this.id)">
+				<p>Tuesday</p>
+				<p class="hidden" id="tuesdaySchedule"></p>
+			</label><br>
+			<label class="labelClass" id="wednesday" onclick="showSchedule(this.id)">
+				<p>Wednesday</p>
+				<p class="hidden" id="wednesdaySchedule"></p>
+			</label><br>
+		</div>
+		<div id="right" align="center">
+			<label class="labelClass" id="thursday" onclick="showSchedule(this.id)">
+				<p>Thursday</p>
+				<p class="hidden" id="thursdaySchedule"></p>
+			</label><br>
+			<label class="labelClass" id="friday" onclick="showSchedule(this.id)">
+				<p>Friday</p>
+				<p class="hidden" id="fridaySchedule"></p>
+			</label><br>
+			<label class="labelClass" id="saturday" onclick="showSchedule(this.id)">
+				<p>Saturday</p>
+				<p class="hidden" id="saturdaySchedule"></p>
+			</label><br>
+		</div>	
+	</section>
+		
 	</body>
-	
-</html>
