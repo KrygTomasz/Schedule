@@ -2,20 +2,20 @@
 
 <schedule>
   <day name="monday">
-    <lesson start="8">Historia</lesson>
-    <lesson start="9">Mata</lesson>
-    <lesson start="10">Polaj</lesson>
+    <lesson start="12">Historia</lesson>
+    <lesson start="13">Mata</lesson>
+    <lesson start="14">Polaj</lesson>
   </day>
   <day name="tuesday">
-    <lesson start="8">Historia</lesson>
-    <lesson start="9">Mata</lesson>
-    <lesson start="10">Polaj</lesson>
+    <lesson start="6">Niemiecki</lesson>
+    <lesson start="7">Mata</lesson>
+    <lesson start="8">Polaj</lesson>
   </day>
   <day name="wednesday">
     <lesson start="8">Historia</lesson>
     <lesson start="9">Mata</lesson>
     <lesson start="10">Polaj</lesson>
     <lesson start="11">Polaj</lesson>
-    <lesson start="12">WF</lesson>
+    <lesson start="12">Niemiecki</lesson>
   </day>
 </schedule>
