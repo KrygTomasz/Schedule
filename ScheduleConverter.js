@@ -34,6 +34,7 @@ function ScheduleConverter(daysTable,startHour,endHour){
     }
 
     console.log(scheduleArray);
+    return scheduleArray;
 
   }
 
