@@ -22,7 +22,7 @@ class scheduleManager {
       var apiClient = new ApiClient('http://localhost');
       var scheduleConverter = new ScheduleConverter([],5,13);
       apiClient.getGroupSchedule("GroupA",scheduleConverter.convertJSONToArray);
-      console.log(apiClient.getter());
+      //console.log(apiClient.getter());
 
 
   }
