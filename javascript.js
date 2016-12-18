@@ -17,6 +17,14 @@ class scheduleManager {
 			["15:00-16:00",	"",			"",			"Mata",			"",			"Piątek", ""],
 			["16:00-17:00",	"",			"",			"Mata",			"",			"", ""],
 		];
+
+
+      var apiClient = new ApiClient('http://localhost');
+      var scheduleConverter = new ScheduleConverter([],5,13);
+      apiClient.getGroupSchedule("GroupA",scheduleConverter.convertJSONToArray);
+      console.log(apiClient.getter());
+
+
   }
 
   createCell(data) {
@@ -57,11 +65,10 @@ class scheduleManager {
 }
 
 var showSchedule = function(id) {
+
 	var scheduleId = id + "Schedule";
 	var schedule = document.getElementById(scheduleId);
 
 	var sc = new scheduleManager("plan zajec");
 	sc.getScheduleById(scheduleId);
-
-	schedule.classList.toggle("hidden");
 }

@@ -27,9 +27,15 @@ label {
 .labelClass {
 	background-color: #999;
 	text-align: left;
+	font-weight: 300;
 	border: 1px solid #000;
 	cursor:pointer;
 	color: #000;
+	border-radius: 10px;
+}
+
+.leftPadding {
+	padding-left: 15px;
 }
 
 @media only screen and (orientation : portrait) {
