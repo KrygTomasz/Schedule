@@ -1,6 +1,6 @@
 var apiClient = new ApiClient('http://localhost');
 var scheduleConverter = new ScheduleConverter([],5,13);
-
+var SM;
 //apiClient.getGroupSchedule("GroupA",scheduleConverter.convertJSONToArray); <-- example
 
 class scheduleManager {
@@ -18,6 +18,7 @@ class scheduleManager {
 			["16:00-17:00",	"",			"",			"Mata",			"",			"", ""],
 		];
 
+    SM = this;
 
       var apiClient = new ApiClient('http://localhost');
       var scheduleConverter = new ScheduleConverter([],5,13);
@@ -62,6 +63,30 @@ class scheduleManager {
     }
 		$("#"+scheduleId).html($table);
   }
+
+  //Tak by było fajnie:
+  showScheduleGrid(ScheduleJSON){
+    var scheduleArray = scheduleConverter.convertJSONToArray(ScheduleJSON);
+    //i teraz rysuje tablice ale nie wiem ocb tu \/
+    var scheduleNames = {}
+    scheduleNames["mondaySchedule"] = 1;
+    scheduleNames["tuesdaySchedule"] = 2;
+    scheduleNames["wednesdaySchedule"] = 3;
+    scheduleNames["thursdaySchedule"] = 4;
+    scheduleNames["fridaySchedule"] = 5;
+    scheduleNames["saturdaySchedule"] = 6;
+
+		var rows = scheduleArray.length;
+		var columns = scheduleArray[0].length;
+    var $cell;
+    var $table = SM.createList();
+		for (var i = 1; i < rows; i++) {
+      var $text = scheduleArray[i][0] + "   " + scheduleArray[i][scheduleNames[1]];
+      $cell = SM.createCell($text);
+      $table.append($cell);
+    }
+		$("#"+1).html($table);
+  }
 }
 
 var showSchedule = function(id) {
@@ -70,5 +95,6 @@ var showSchedule = function(id) {
 	var schedule = document.getElementById(scheduleId);
 
 	var sc = new scheduleManager("plan zajec");
+  //apiClient.getGroupSchedule("GroupA",sc.showScheduleGrid);
 	sc.getScheduleById(scheduleId);
 }

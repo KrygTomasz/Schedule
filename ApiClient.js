@@ -6,6 +6,7 @@ function ApiClient(server){
   		type: 'GET',
   		url: '/Schedule/Server/Schedule.php/Schedule/?group='+groupName,
   		success: function(data){
+        console.log(data);
   				method($.parseJSON(data));
   		}
   	});
