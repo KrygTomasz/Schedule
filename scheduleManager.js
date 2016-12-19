@@ -39,12 +39,12 @@ class scheduleManager {
     var hourTable = scheduleArray[0];
     var $table;
     for (var i = 1; i < rows; i++) {
-      $table = SM.createHtmlListFromTwoTables(hourTable,scheduleArray[i]);
+      $table = SM.createHtmlListFromHourAndActivity(hourTable,scheduleArray[i]);
   		$(scheduleElementsId[i-1]).html($table);
     }
   }
 
-  createHtmlListFromTwoTables(hourTable,activitiesTable) {
+  createHtmlListFromHourAndActivity(hourTable,activitiesTable) {
     var $htmlList = SM.createList();
     var $activity,$hour,$text;
     var $cell;

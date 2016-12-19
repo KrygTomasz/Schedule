@@ -12,12 +12,11 @@ $.ajax({
 var populateDropDownListWithGroups = function(schedules) {
 	var $listItems = createGroupList();
 		$(schedules).find("a:contains(.XML)").each(function(){
-				// will loop through
+				// loop through files with extension
 				var $scheduleFile = $(this).attr("href");
 				var $fileName = $scheduleFile.substr(0, $scheduleFile.lastIndexOf('.'));
 				var $listItem = createListItem($fileName);
 				$listItems.append($listItem);
-									alert($fileName);
 		 });
 		 $('#dropDownMenu').html($listItems);
 }
@@ -33,15 +32,13 @@ var createGroupList = function() {
 var createListItem = function(data) {
 	var $item = $("<li />", {
 				id: data,
-				onclick: 'getSchedule(this.id)'
+				onclick: 'getSchedule(this.id)',
 		});
 	$item.append(data);
 	return $item;
 };
 
 var getSchedule = function(groupNumber) {
-	//var scheduleId = id + "Schedule";
-	//var schedule = document.getElementById(scheduleId);
 	$('#wrapper').removeClass('hidden');
 	var sc = new scheduleManager();
   apiClient.getGroupSchedule(groupNumber,sc.showScheduleGrid);
