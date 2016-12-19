@@ -18,4 +18,19 @@
     <lesson start="11">Polaj</lesson>
     <lesson start="12">Niemiecki</lesson>
   </day>
+  <day name="thursday">
+    <lesson start="11">Hista</lesson>
+    <lesson start="12">Mata</lesson>
+    <lesson start="13">Polaj</lesson>
+  </day>
+  <day name="friday">
+    <lesson start="9">Hista</lesson>
+    <lesson start="10">Mata</lesson>
+    <lesson start="11">Przyrka</lesson>
+  </day>
+  <day name="saturday">
+    <lesson start="5">Śniadanie</lesson>
+    <lesson start="10">Obiad</lesson>
+    <lesson start="13">Kolacja</lesson>
+  </day>
 </schedule>

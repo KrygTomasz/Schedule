@@ -1,5 +1,5 @@
 class scheduleManager {
-  constructor(schedule) {
+  constructor() {
     this.schedule = [
 			["hour/day",	"Monday",	"Tuesday",	"Wednesday",	"Thursday",	"Friday", "Saturday"],
 			["8:00-9:00",		"Mata",		"",			"Mata",			"Przyrka",	"", ""],

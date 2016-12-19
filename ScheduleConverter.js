@@ -1,6 +1,6 @@
 function ScheduleConverter(daysTable,startHour,endHour){
 
-  this.daysTable = ["monday","tuesday","wednesday","thursday","friday"];
+  this.daysTable = ["monday","tuesday","wednesday","thursday","friday","saturday"];
   SC = this;
 
 

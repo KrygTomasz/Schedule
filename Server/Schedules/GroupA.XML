@@ -2,20 +2,40 @@
 
 <schedule>
   <day name="monday">
-    <lesson start="8">Historia</lesson>
+    <lesson start="8">Hista</lesson>
     <lesson start="9">Mata</lesson>
     <lesson start="10">Polaj</lesson>
   </day>
   <day name="tuesday">
-    <lesson start="8">Historia</lesson>
+    <lesson start="8">Hista</lesson>
     <lesson start="9">Mata</lesson>
-    <lesson start="10">Polaj</lesson>
+    <lesson start="10">Przyrka</lesson>
   </day>
   <day name="wednesday">
-    <lesson start="8">Historia</lesson>
+    <lesson start="8">Hista</lesson>
     <lesson start="9">Mata</lesson>
     <lesson start="10">Polaj</lesson>
     <lesson start="11">Polaj</lesson>
     <lesson start="12">WF</lesson>
+  </day>
+  <day name="thursday">
+    <lesson start="10">Przyrka</lesson>
+    <lesson start="11">Mata</lesson>
+    <lesson start="12">WF</lesson>
+    <lesson start="13">Angol</lesson>
+    <lesson start="14">Angol</lesson>
+  </day>
+  <day name="friday">
+    <lesson start="9">WF</lesson>
+    <lesson start="10">WF</lesson>
+    <lesson start="11">Mata</lesson>
+    <lesson start="12">Mata</lesson>
+  </day>
+  <day name="saturday">
+    <lesson start="9">Endokrynolog</lesson>
+    <lesson start="10">Karidiolog</lesson>
+    <lesson start="11">Neurolog</lesson>
+    <lesson start="12">Gastrolog</lesson>
+    <lesson start="13">Śmierć</lesson>
   </day>
 </schedule>

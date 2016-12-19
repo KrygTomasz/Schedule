@@ -7,8 +7,10 @@
 		<link rel="stylesheet" href="bootstrap.css">
 		<link rel="stylesheet" href="style.css">
 
-		<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<!--<script src="https://code.jquery.com/jquery-3.1.1.js"></script>-->
+    <script src="jquery-3.1.1.min.js"></script>
+		<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+		<script src="bootstrap.min.js"></script>
 		<script type="text/javascript" src="ApiClient.js"></script>
 		<script type="text/javascript" src="ScheduleConverter.js"></script>
 		<script type="text/javascript" src="scheduleManager.js"></script>
@@ -32,47 +34,43 @@
 				<ul class="nav navbar-nav">
 					<li><a href="#">Link</a></li>
 					<li class="dropdown this-works">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Works <b class="caret"></b></i></a>
-						<div class="dropdown-menu dropdown-form">
-							<form class="form-inline" role="form">
-								<div class="input-group">
-									<input type="text" class="form-control" placeholder="Search" id="InputSearch" class="form-control">
-									<span class="input-group-btn">
-										<button class="btn btn-default" type="button">GO</button>
-									</span>
-								</div><!-- /input-group -->
-							</form>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Groups <b class="caret"></b></i></a>
+						<div class="dropdown-menu">
+								<ul class="input-group">
+									<li><a href="#" id="groupA" onclick="getSchedule(this.id)">Group A</a></li>
+									<li><a href="#" id="groupB" onclick="getSchedule(this.id)">Group B</a></li>
+								</ul><!-- /input-group -->
 						</div>
 					</li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
 
-	<section id="wrapper">
+	<section id="wrapper" class="hidden">
 		<div id="left" align="center">
-			<label class="labelClass" id="monday" onclick="showSchedule(this.id)" data-toggle="collapse" href="#mondaySchedule">
+			<label class="labelClass" id="monday" data-toggle="collapse" href="#mondaySchedule">
 				<p class="leftPadding">Monday</p>
 				<p class="collapse" id="mondaySchedule"></p>
 			</label><br>
-			<label class="labelClass" id="tuesday" onclick="showSchedule(this.id)" data-toggle="collapse" href="#tuesdaySchedule">
+			<label class="labelClass" id="tuesday" data-toggle="collapse" href="#tuesdaySchedule">
 				<p class="leftPadding">Tuesday</p>
 				<p class="collapse" id="tuesdaySchedule"></p>
 			</label><br>
-			<label class="labelClass" id="wednesday" onclick="showSchedule(this.id)" data-toggle="collapse" href="#wednesdaySchedule">
+			<label class="labelClass" id="wednesday" data-toggle="collapse" href="#wednesdaySchedule">
 				<p class="leftPadding">Wednesday</p>
 				<p class="collapse" id="wednesdaySchedule"></p>
 			</label><br>
 		</div>
 		<div id="right" align="center">
-			<label class="labelClass" id="thursday" onclick="showSchedule(this.id)" data-toggle="collapse" href="#thursdaySchedule">
+			<label class="labelClass" id="thursday" data-toggle="collapse" href="#thursdaySchedule">
 				<p class="leftPadding">Thursday</p>
 				<p class="collapse" id="thursdaySchedule"></p>
 			</label><br>
-			<label class="labelClass" id="friday" onclick="showSchedule(this.id)" data-toggle="collapse" href="#fridaySchedule">
+			<label class="labelClass" id="friday" data-toggle="collapse" href="#fridaySchedule">
 				<p class="leftPadding">Friday</p>
 				<p class="collapse" id="fridaySchedule"></p>
 			</label><br>
-			<label class="labelClass" id="saturday" onclick="showSchedule(this.id)" data-toggle="collapse" href="#saturdaySchedule">
+			<label class="labelClass" id="saturday" data-toggle="collapse" href="#saturdaySchedule">
 				<p class="leftPadding">Saturday</p>
 				<p class="collapse" id="saturdaySchedule"></p>
 			</label><br>
