@@ -1,24 +1,10 @@
 class scheduleManager {
   constructor() {
-    this.schedule = [
-			["hour/day",	"Monday",	"Tuesday",	"Wednesday",	"Thursday",	"Friday", "Saturday"],
-			["8:00-9:00",		"Mata",		"",			"Mata",			"Przyrka",	"", ""],
-			["9:00-10:00",	"Mata",		"wuf",		"Mata",			"Przyrka",	"", ""],
-			["10:00-11:00",	"Polak",	"Angol",	"Mata",			"WDŻ",		"Hista", ""],
-			["11:00-12:00",	"Rela",		"Niemiec",	"Mata",			"GZW",		"Chemia", ""],
-			["12:00-13:00",	"Mata",		"Polak",	"Mata",			"",			"Biola", ""],
-			["13:00-14:00",	"",			"Mata",		"Mata",			"",			"Fiza", ""],
-			["14:00-15:00",	"",			"",			"Mata",			"",			"Zajebany", ""],
-			["15:00-16:00",	"",			"",			"Mata",			"",			"Piątek", ""],
-			["16:00-17:00",	"",			"",			"Mata",			"",			"", ""],
-		];
-
     SM = this;
 
-      var apiClient = new ApiClient('http://localhost');
-      var scheduleConverter = new ScheduleConverter([],5,13);
-      apiClient.getGroupSchedule("GroupA",scheduleConverter.convertJSONToArray);
-
+    var apiClient = new ApiClient('http://localhost');
+    var scheduleConverter = new ScheduleConverter([],5,13);
+    apiClient.getGroupSchedule("GroupA",scheduleConverter.convertJSONToArray);
   }
 
   createCell(data) {
