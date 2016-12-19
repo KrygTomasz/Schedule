@@ -16,10 +16,10 @@ class scheduleManager {
   }
 
   createList() {
-  	var $row = $("<div />", {
+  	var $list = $("<div />", {
           class: 'list-group'
       });
-  	return $row;
+  	return $list;
   }
 
   showScheduleGrid(ScheduleJSON){
