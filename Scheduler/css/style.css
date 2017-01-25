@@ -1,0 +1,46 @@
+.wellday{
+  padding: 0px;
+  background: rgba(0,0,255,0.5);
+  position: fixed;
+
+}
+
+.table-limit{
+  padding: 0;
+  max-height: 300px;
+  overflow-y: scroll;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: fixed;
+}
+
+.task{
+  padding: 0;
+  background-color:rgba(0,0,255,0.4);
+  width: 16%;
+  height: auto;
+  margin-top: 40px;
+  margin-left: 16%;
+  position: absolute;
+  z-index: 10;
+  display: block;
+}
+
+
+.table-fixed thead {
+  width: 97%;
+}
+.table-fixed tbody {
+  height: 230px;
+  overflow-y: auto;
+  width: 100%;
+}
+.table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+  display: block;
+}
+.table-fixed tbody td, .table-fixed thead > tr> th {
+  float: left;
+  border-bottom-width: 0;
+}

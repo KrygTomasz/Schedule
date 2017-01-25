@@ -1,0 +1,44 @@
+<?xml version='1.0' ?>
+
+<schedule>
+  <day name="monday">
+    <lesson start="8">Testowanie</lesson>
+    <lesson start="9">Test</lesson>
+    <lesson start="10">Testu</lesson>
+  </day>
+  <day name="tuesday">
+    <lesson start="8">Zajęcia testowe</lesson>
+    <lesson start="9">Test zajęć</lesson>
+    <lesson start="10">Testowe zajęcia</lesson>
+  </day>
+  <day name="wednesday">
+    <lesson start="8">Planowanie</lesson>
+    <lesson start="9">Realizowanie</lesson>
+    <lesson start="10">Zakończenie</lesson>
+    <lesson start="11">Ciepło</lesson>
+    <lesson start="12">Zimno</lesson>
+	<lesson start="13">Zimno</lesson>
+  </day>
+  <day name="thursday">
+	<lesson start="9">Zajęcia A</lesson>
+    <lesson start="10">Zajęcia B</lesson>
+    <lesson start="11">Zajęcia C</lesson>
+    <lesson start="12">Zajęcia D</lesson>
+    <lesson start="13">Zajęcia E</lesson>
+    <lesson start="14">Zajęcia F</lesson>
+  </day>
+  <day name="friday">
+    <lesson start="9">WF</lesson>
+    <lesson start="10">WF</lesson>
+    <lesson start="11">Mata</lesson>
+    <lesson start="12">Mata</lesson>
+	<lesson start="12">Koniec</lesson>
+  </day>
+  <day name="saturday">
+    <lesson start="9">Wstać</lesson>
+    <lesson start="10">Nic</lesson>
+    <lesson start="11">Grać</lesson>
+    <lesson start="12">Jeść</lesson>
+    <lesson start="13">Spać</lesson>
+  </day>
+</schedule>
