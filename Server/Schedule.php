@@ -17,7 +17,6 @@
 					echo($response);
 			}
 			break;
-
   }
 
 	function getSchedule($scheduleName){
