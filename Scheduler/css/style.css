@@ -19,10 +19,10 @@
 .task{
   padding: 0;
   background-color:rgba(0,0,255,0.4);
-  width: 16%;
+  width: 16.5%;
   height: auto;
   margin-top: 40px;
-  margin-left: 16%;
+  margin-left: 17%;
   position: absolute;
   z-index: 10;
   display: block;
