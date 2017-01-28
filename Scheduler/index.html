@@ -35,16 +35,16 @@
   </div>
 
   <div class="container-fluid">
-    <div class="row">
+    <div class="row ">
 
-          <div class="table-limit col-lg-6 col-md-8 col-sm-10 col-xs-12 well">
+          <div class="table-limit col-lg-offset-3 col-lg-8 col-md-8 col-sm-10 col-xs-12 well ">
 
               <div class="task well">
                 <p class="text-center">Zajęcie pierwsze</p>
                 <p class="text-center small">Detale1</p>
               </div>
 
-              <div class="task well" style="margin-left: 33.5%;">
+              <div class="task well" style="margin-left: 33.35%;">
                 <p class="text-center">Zajęcie drugie</p>
                 <p class="text-center small">Detale2</p>
               </div>
@@ -54,12 +54,27 @@
                 <p class="text-center small">Detale3</p>
               </div>
 
-              <div class="task well" style="margin-left: 66.5%;">
+              <div class="task well" style="margin-left: 66.6%;">
                 <p class="text-center">Zajęcie czwarte</p>
                 <p class="text-center small">Detale4</p>
               </div>
 
-              <div class="task well" style="margin-left: 83%;">
+              <div class="task well" style="margin-left: 83.4%;">
+                <p class="text-center">Zajęcie piąte</p>
+                <p class="text-center small">Detale5</p>
+              </div>
+
+              <div class="task well" style="margin-top: 140px;">
+                <p class="text-center">Zajęcie xxx</p>
+                <p class="text-center small">Detale 6</p>
+              </div>
+
+              <div class="task well" style="margin-left:  33.5%; margin-top: 120px;">
+                <p class="text-center">Zajęcie piąte</p>
+                <p class="text-center small">Detale5</p>
+              </div>
+
+              <div class="task well" style="margin-left: 50%; margin-top: 300px;">
                 <p class="text-center">Zajęcie piąte</p>
                 <p class="text-center small">Detale5</p>
               </div>
@@ -120,17 +135,19 @@
 
 
 
+
+
   </div>
 
-
+  <div id="plan"></div>
 
   <script src="js/libs/jquery-3.1.1.min.js"></script>
   <script src="js/libs/underscore.js"></script>
   <script src="js/libs/backbone.js"></script>
-  <script src="bootstrap/js/bootstrap.js"></script>
 
-  <script src="js/models/przykladModel.js"></script>
-  <script src="js/przykladApp.js"></script>
+  <script src="js/models/scheduleTableModel.js"></script>
+  <script src="js/views/scheduleTableView.js"></script>
+  <script src="js/scheduleApp.js"></script>
 
 </body>
 </html>

@@ -13,7 +13,7 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  position: fixed;
+  /*position: fixed;*/
 }
 
 .task{
@@ -22,7 +22,7 @@
   width: 16.5%;
   height: auto;
   margin-top: 40px;
-  margin-left: 17%;
+  margin-left: 16.75%;
   position: absolute;
   z-index: 10;
   display: block;
