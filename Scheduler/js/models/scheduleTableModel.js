@@ -3,8 +3,7 @@
 var TableModel = Backbone.Model.extend({
   defaults:{
     timeSpan : 18,
-    timeInterval: 30,
-    timeStartHour: 5
+    startHour: 5
   },
 
 });
