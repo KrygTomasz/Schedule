@@ -2,12 +2,12 @@
 var TableView = Backbone.View.extend({
 
   render: function(){
-    var theads = '<th class="col-sm-2 col-xs-3"></th>';
-    theads += '<th class="col-sm-2 col-xs-3">Monday</th>';
-    theads += '<th class="col-sm-2 col-xs-3">Tuesday</th>';
-    theads += '<th class="col-sm-2 col-xs-3">Wednesday</th>';
-    theads += '<th class="col-sm-2 col-xs-3">Thursday</th>';
-    theads += '<th class="col-sm-2 col-xs-3">Friday</th>';
+    var theads = '<th style="width:10%;" class=""></th>';
+    theads += '<th style="width:16.6%;" class="">Monday</th>';
+    theads += '<th style="width:16.6%;" class="">Tuesday</th>';
+    theads += '<th style="width:16.6%;" class="">Wednesday</th>';
+    theads += '<th style="width:16.6%;" class="hidden-xs">Thursday</th>';
+    theads += '<th style="width:16.6%;" class="hidden-xs">Friday</th>';
 
     var tbody = '';
 
@@ -17,10 +17,10 @@ var TableView = Backbone.View.extend({
     for(i = startH ; i < startH+span ; i++){
       var h = Math.floor(i/2);
       if(i%2==0){
-        tbody += '<tr> <td><p class="text-left small ">'+h+':00 -  '+h+':30</p></td><td></td><td></td><td></td><td></td><td></td> </tr>';
+        tbody += '<tr> <td><p style="font-size: 1.2vw;">'+h+':00 -  '+h+':30</p></td><td></td><td></td><td></td><td class="hidden-xs"></td><td class="hidden-xs"></td> </tr>';
       }
       else{
-        tbody += '<tr> <td><p class="text-left small ">'+h+':30 -  '+(h+1)+':00</p></td><td></td><td></td><td></td><td></td><td></td> </tr>';
+        tbody += '<tr> <td><p style="font-size: 1.2vw;">'+h+':30 -  '+(h+1)+':00</p></td><td></td><td></td><td></td><td class="hidden-xs"></td><td class="hidden-xs"></td> </tr>';
       }
     }
 
