@@ -15,14 +15,14 @@ var tableView = new TableView({el: "#plan", model : tableInst});
 tableView.render();
 
 var taskView1 = new TaskView({el: "#taskContainter", model : taskInst1});
-taskView1.render();
+//taskView1.render();
 
 var taskView2 = new TaskView({el: "#taskContainter", model : taskInst2});
-taskView2.render();
+//taskView2.render();
 
 var taskView3 = new TaskView({el: "#taskContainter", model : taskInst3});
-taskView3.render();
+//taskView3.render();
 
-var taskCollectionView = new TaskCollectionView({el: "#plan", collection: taskCollection} );
+var taskCollectionView = new TaskCollectionView({el: "#taskContainter", collection: taskCollection} );
 
 taskCollectionView.render();

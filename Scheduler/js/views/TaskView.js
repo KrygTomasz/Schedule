@@ -14,6 +14,6 @@ var TaskView = Backbone.View.extend({
     style+'\"><p class="text-center">'+title+
     '</p><p class="text-center small" style="font-size: 1.1vw;">'+details+'</p></div>';
     this.$el.html(html);
-    return this;
+    return html;
   }
 })
