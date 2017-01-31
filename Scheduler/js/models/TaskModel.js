@@ -1,5 +1,5 @@
 
-var TaskModel = Backbone.Model.extend({
+var Task = Backbone.Model.extend({
   defaults:{
     day: "Tuesday",
     timeStart : 7,

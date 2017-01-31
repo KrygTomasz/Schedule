@@ -33,7 +33,7 @@ th {
     background-color: red;
     overflow: hidden;
     max-width: 16.75vw;
-    min-width: 10%;
+    /*min-width: 10%;*/
 }
 
 .table-fixed tbody {
