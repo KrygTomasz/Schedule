@@ -17,6 +17,7 @@
 }
 
 .task{
+  overflow: hidden;
   padding: 0;
   background-color:rgba(0,0,255,0.4);
   width: 16.5%;
@@ -28,10 +29,13 @@
   display: block;
 }
 
-
-.table-fixed thead {
-  width: 97%;
+th {
+    background-color: red;
+    overflow: hidden;
+    max-width: 16.75vw;
+    min-width: 10%;
 }
+
 .table-fixed tbody {
   height: 230px;
   overflow-y: auto;
