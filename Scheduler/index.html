@@ -2,10 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Backbone - Przykład</title>
 
   <link  rel="stylesheet" href="bootstrap/css/bootstrap.css" type="text/css"/>
   <link  rel="stylesheet" href="css/style.css" type="text/css"/>
+
+  <script type="text/javascript" src="js/libs/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="js/libs/underscore.js"></script>
+  <script type="text/javascript" src="js/libs/backbone.js"></script>
+  <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -18,9 +24,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <div class="collapse navbar-collapse navHeaderColapse">
+      <div  class="collapse navbar-collapse navHeaderColapse">
 
-        <ul class="nav navbar-nav navbar-right">
+        <ul id="navHeaderColapse" class="nav navbar-nav navbar-right">
 
           <li><a href=#>Home</a></li>
           <li><a href=#>Search <span class="glyphicon-search"></span></a></li>
@@ -37,13 +43,11 @@
 
 
 
-  <div class="container">
-    <div id="plan"></div>
-  </div>
+    <div class="container">
+      <div id="plan"></div>
+    </div>
 
-  <script src="js/libs/jquery-3.1.1.min.js"></script>
-  <script src="js/libs/underscore.js"></script>
-  <script src="js/libs/backbone.js"></script>
+
 
   <script src="js/models/scheduleTableModel.js"></script>
   <script src="js/models/TaskModel.js"></script>
