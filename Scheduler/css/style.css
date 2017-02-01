@@ -7,7 +7,7 @@
 
 .table-limit{
   padding: 0;
-  max-height: 300px;
+  max-height: 80vh;
   overflow: scroll;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -30,7 +30,7 @@
 }
 
 th {
-    background-color: red;
+    /*background-color: red;*/
     overflow: hidden;
     max-width: 16.75vw;
     height: 10%;

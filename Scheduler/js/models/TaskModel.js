@@ -1,7 +1,7 @@
 
 var Task = Backbone.Model.extend({
   defaults:{
-    day: "Tuesday",
+    day: 1,
     timeStart : 7,
     timeSpan: 1,
     title: "Zajęcia",
