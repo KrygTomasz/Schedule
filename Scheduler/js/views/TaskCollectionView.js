@@ -1,9 +1,9 @@
 var TaskCollectionView = Backbone.View.extend({
 
   render: function(){
+    this.$el.empty();
     this.collection.each(function(task){
       var taskView = new TaskView({model: task});
-      console.log(taskView.render());
       this.$el.append(taskView.render());
     },this
     );

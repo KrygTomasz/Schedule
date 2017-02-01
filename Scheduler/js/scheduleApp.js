@@ -1,9 +1,9 @@
 
 
 var tableInst = new TableModel({});
-var taskInst1 = new Task({"title":"Task 1"});
-var taskInst2 = new Task({"title":"Task 2"});
-var taskInst3 = new Task({"title":"Task 3"});
+var taskInst1 = new Task({"title":"Task 1", "timeStart" : 0});
+var taskInst2 = new Task({"title":"Task 2", "timeStart" : 1});
+var taskInst3 = new Task({"title":"Task 3", "timeStart" : 17});
 var taskCollection = new TaskCollection();
 
 taskCollection.add(taskInst1);

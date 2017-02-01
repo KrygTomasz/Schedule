@@ -8,7 +8,7 @@
 .table-limit{
   padding: 0;
   max-height: 300px;
-  overflow-y: scroll;
+  overflow: scroll;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -33,7 +33,18 @@ th {
     background-color: red;
     overflow: hidden;
     max-width: 16.75vw;
+    height: 10%;
     /*min-width: 10%;*/
+}
+
+tr{
+  box-sizing: border-box;
+}
+
+
+
+
+.taskContainter{
 }
 
 .table-fixed tbody {
