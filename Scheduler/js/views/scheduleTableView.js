@@ -20,7 +20,7 @@ var TableView = Backbone.View.extend({
         tbody += '<tr> <td id="row'+i+'"><p style="font-size: 15px;">'+h+':00 - '+h+':30</p></td><td></td><td></td><td></td><td class=".hidden-xs"></td><td class=".hidden-xs"></td> </tr>';
       }
       else{
-        tbody += '<tr> <td><p style="font-size: 15px;">'+h+':30 - '+(h+1)+':00</p></td><td></td><td></td><td></td><td class=".hidden-xs"></td><td class=".hidden-xs"></td> </tr>';
+        tbody += '<tr> <td id="row'+i+'"><p style="font-size: 15px;">'+h+':30 - '+(h+1)+':00</p></td><td></td><td></td><td></td><td class=".hidden-xs"></td><td class=".hidden-xs"></td> </tr>';
       }
     }
 
