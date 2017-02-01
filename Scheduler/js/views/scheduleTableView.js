@@ -2,7 +2,7 @@
 var TableView = Backbone.View.extend({
 
   render: function(){
-    var theads = '<th class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></th>';
+    var theads = '<th id="hoursColumn" class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></th>';
     theads += '<th id="headerMonday" class="col-lg-2 col-md-2 col-sm-2 col-xs-2">Monday</th>';
     theads += '<th id="headerTuesday" class="col-lg-2 col-md-2 col-sm-2 col-xs-2">Tuesday</th>';
     theads += '<th id="headerWednesday" class="col-lg-2 col-md-2 col-sm-2 col-xs-2">Wednesday</th>';

@@ -4,7 +4,7 @@ var TableModel = Backbone.Model.extend({
     startHour: 5
   },
 
-	pixelGapForHour: function(hour,mins){
+	hourToPixels: function(hour,mins) {
 
 		var pixels = parseFloat( $("#headerMonday").css("height"),10);
 		var startHour = this.get("startHour");
@@ -26,6 +26,23 @@ var TableModel = Backbone.Model.extend({
 		pixels += (parseFloat( $("#row"+lastRow+"").css("height")) * lastRowPercentage);
 		
 		return pixels;
+	},
+	
+	dayToPixels: function(dayNumber) {
+		
+		var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+		
+		var pixels = parseFloat( $("#hoursColumn").css("width"))
+		
+		for(var i = 0; i < dayNumber; i++) {
+			if(i < days.length - 1) {
+				var day = days[i]
+				pixels += (parseFloat( $("#header"+day+"").css("width")));
+			}
+		}
+		
+		return pixels;
+		
 	}
 
 });
