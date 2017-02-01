@@ -1,6 +1,8 @@
 
 
 var tableInst = new TableModel({"startHour":7});
+tableInst.hourToRows(2,3);
+
 var taskInst1 = new Task({"title":"Task 1", "timeStart" : 0});
 var taskInst2 = new Task({"title":"Task 2", "timeStart" : 1, "timeSpan":1.75});
 var taskInst3 = new Task({"title":"Task 3", "timeStart" : 3 , "day":0});

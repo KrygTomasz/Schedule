@@ -4,4 +4,9 @@ var TableModel = Backbone.Model.extend({
     startHour: 5
   },
 
+  hourToRows: function(hour,mins){
+
+    return "To jest "+this.get("timeSpan")+":"+this.get("startHour")+"rowow."
+  }
+
 });
