@@ -31,7 +31,13 @@
           <li><a href=#>Home</a></li>
           <li>
             <a href=# data-toggle="collapse" data-target=".form-control">Search <span class="glyphicon glyphicon-search"></span></a>
-            <form class="search" method="post" action="index.html" >
+            <form id="searchInput" class="search" method="post" action="index.html" >
+              <input id="searchInput" type="text" class="collapse form-control" placeholder="Search for schedule" />
+              <ul id="searchResults" class="dropdown-menu">
+                <li class="dropdown-item" onclick="console.log('lol')">Action</a>
+                <li class="dropdown-item" href="#">Another action</a>
+                <li class="dropdown-item" href="#">Something else here</a>
+              </ul>
             </form>
           </li>
           <li><a href=#>Add new plan</a></li>
