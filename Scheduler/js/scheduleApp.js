@@ -1,4 +1,4 @@
-
+var apiClient = new ApiClient('http://localhost');
 
 var tableInst = new TableModel({"startHour":7});
 tableInst.hourToPixels(2,3);
