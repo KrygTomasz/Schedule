@@ -59,3 +59,7 @@ tr{
   float: left;
   border-bottom-width: 0;
 }
+
+.result:hover {
+    background-color: gray;
+}

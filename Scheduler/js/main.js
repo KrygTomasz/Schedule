@@ -1,4 +1,8 @@
 $(document).ready(function () {
+
+    $('#searchResults').width('215%');
+
+
     $("#search").on("focusin",function() {
        $("#searchResults").toggle();
    });
