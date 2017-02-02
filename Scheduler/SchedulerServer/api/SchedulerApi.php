@@ -20,13 +20,17 @@ require_once $_SERVER['DOCUMENT_ROOT']."\Schedule\Scheduler\SchedulerServer\DB\D
 							switch($request)
 							{
 								case "schedules":
-
-									//eg. http://localhost/schedule/Scheduler/SchedulerServer/Api/SchedulerApi.php/schedules
+									//eg. http://localhost/schedule/Scheduler/SchedulerServer/Api/SchedulerApi.php/schedules/?scheduleName=Schedule
                   if(isset($_GET['scheduleName'])){
                     $response = json_encode(getTasksByScheduleName($_GET['scheduleName']));
                     echo($response);
                   }
 									break;
+                case "publicSchedules":
+                //eg. http://localhost/schedule/Scheduler/SchedulerServer/Api/SchedulerApi.php/publicSchedules/
+                  $response = json_encode(getPublicSchedulesNames());
+                  echo($response);
+                  break;
 							}
 
               break;

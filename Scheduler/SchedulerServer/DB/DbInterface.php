@@ -13,6 +13,21 @@ function getScheduleByName($scheduleName){
   return $row;
 }
 
+function getPublicSchedulesNames(){
+  global $host, $db_user, $db_password, $db_name;
+  $db_connect = @new mysqli($host, $db_user, $db_password, $db_name);
+  $queryStr = sprintf("SELECT * FROM `schedules` WHERE private = 0");
+  $result = @$db_connect->query($queryStr);
+  $row = $result->fetch_assoc();
+  $namesArr = array();
+  while($row != NULL){
+    array_push($namesArr,$row["name"]);
+    $row = $result->fetch_assoc();
+  }
+  mysqli_close($db_connect);
+  return $namesArr;
+}
+
 function getTasksByScheduleId($scheduleId){
 		global $host, $db_user, $db_password, $db_name;
 		$db_connect = @new mysqli($host, $db_user, $db_password, $db_name);
