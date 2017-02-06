@@ -4,10 +4,13 @@ var TaskView = Backbone.View.extend({
   render: function(){
     var rowsH = parseFloat( $("#row14").css("height"),10);
     var rowsW = parseFloat( $("#headerMonday").css("width"),10);
-    var timeStart = parseFloat( $("#headerMonday").css("height"),10)+rowsH*this.model.get("timeStart");
+    //var timeStart = parseFloat( $("#headerMonday").css("height"),10)+rowsH*this.model.get("timeStart");
+    var timeStart = tableInst.hourToPixels(this.model.get("hourStart"),this.model.get("minuteStart"));
     var timeSpan = rowsH*this.model.get("timeSpan");
-    var day = parseFloat( $("#row14").css("width"),10) +rowsW*(this.model.get("day"));
+    var day = tableInst.dayToPixels(this.model.get("day"));
     var taskClass = "task well ";
+
+    console.log(this.model.get("title")+":"+this.model.get("hourStart"));
 
 
     var style = "margin-left: "+day+"px;"
