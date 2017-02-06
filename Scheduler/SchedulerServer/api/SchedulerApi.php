@@ -27,8 +27,8 @@ require_once $_SERVER['DOCUMENT_ROOT']."\Schedule\Scheduler\SchedulerServer\DB\D
                   }
 									break;
                 case "publicSchedules":
-                //eg. http://localhost/schedule/Scheduler/SchedulerServer/Api/SchedulerApi.php/publicSchedules/
-                  $response = json_encode(getPublicSchedulesNames());
+                //eg. http://localhost/schedule/Scheduler/SchedulerServer/Api/SchedulerApi.php/publicSchedules/?scheduleName=Sc
+                  $response = json_encode(getPublicSchedulesNames($_GET['scheduleName']));
                   echo($response);
                   break;
 							}

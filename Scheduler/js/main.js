@@ -4,6 +4,11 @@ $(document).ready(function () {
 
     $('#searchResults').width('215%');
 
+    $("#searchInput").keydown(function() {
+      setTimeout(function(){
+      getSchedulesResults();
+      }, 200);
+    });
 
     $("#search").on("focusin",function() {
       getSchedulesResults();
@@ -24,7 +29,7 @@ $(document).ready(function () {
 });
 
 function getSchedulesResults(){
-  apiClient.getPublicSchedules(populateSchedulesResults);
+  apiClient.getPublicSchedules(populateSchedulesResults,$("#searchInput")[0].value);
 }
 
 function populateSchedulesResults(schedules){

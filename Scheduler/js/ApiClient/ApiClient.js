@@ -1,9 +1,9 @@
 function ApiClient(server){
 
-  this.getPublicSchedules = function(method){
+  this.getPublicSchedules = function(method, partialName){
     $.ajax({
   		type: 'GET',
-  		url: '/schedule/Scheduler/SchedulerServer/Api/SchedulerApi.php/publicSchedules/',
+  		url: '/schedule/Scheduler/SchedulerServer/Api/SchedulerApi.php/publicSchedules/?scheduleName='+partialName,
   		success: function(data){
   			response = $.parseJSON(data);
   			method(response);
@@ -17,7 +17,6 @@ function ApiClient(server){
   		url: '/schedule/Scheduler/SchedulerServer/Api/SchedulerApi.php/schedules/?scheduleName='+scheduleName,
   		success: function(data){
   			response = $.parseJSON(data);
-        console.log(response);
   			method(response);
   			}
   		});

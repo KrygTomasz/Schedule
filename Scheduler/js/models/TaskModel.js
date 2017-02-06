@@ -24,7 +24,6 @@ var Task = Backbone.Model.extend({
       var strArr = str.split(":");
       var span = parseInt(strArr[0]) + (parseInt(strArr[1])/60);
       this.set("timeSpan", span*2);
-      console.log(this.get("timeSpan"));
     }
 
   }

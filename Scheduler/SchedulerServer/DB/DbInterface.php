@@ -13,14 +13,21 @@ function getScheduleByName($scheduleName){
   return $row;
 }
 
-function getPublicSchedulesNames(){
+function getPublicSchedulesNames($name){
   global $host, $db_user, $db_password, $db_name;
   $db_connect = @new mysqli($host, $db_user, $db_password, $db_name);
-  $queryStr = sprintf("SELECT * FROM `schedules` WHERE private = 0");
+  $queryStr = sprintf("SELECT * FROM `schedules` WHERE private = 0 AND name LIKE \"%s\" LIMIT 6",$name."%");
   $result = @$db_connect->query($queryStr);
-  $row = $result->fetch_assoc();
+
+  if($result){
+    $row = $result->fetch_assoc();
+  }
+  else{
+    return $queryStr;
+  }
+
   $namesArr = array();
-  while($row != NULL){
+  while(@$row != NULL){
     array_push($namesArr,$row["name"]);
     $row = $result->fetch_assoc();
   }
