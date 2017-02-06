@@ -12,10 +12,19 @@ var Task = Backbone.Model.extend({
 
 
   initialize : function() {
-    if(this.get("timeStart")){
-      var strArr = this.get("timeStart").split(":");
+    if(typeof this.get("timeStartStr") != "undefined"){
+      var str =  this.get("timeStartStr");
+      var strArr = str.split(":");
       this.set("hourStart", parseInt(strArr[0]));
       this.set("minuteStart", parseInt(strArr[1]));
+    }
+
+    if(typeof this.get("spanStr") != "undefined"){
+      var str = this.get("spanStr");
+      var strArr = str.split(":");
+      var span = parseInt(strArr[0]) + (parseInt(strArr[1])/60);
+      this.set("timeSpan", span*2);
+      console.log(this.get("timeSpan"));
     }
 
   }

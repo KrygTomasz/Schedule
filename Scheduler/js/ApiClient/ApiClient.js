@@ -17,6 +17,7 @@ function ApiClient(server){
   		url: '/schedule/Scheduler/SchedulerServer/Api/SchedulerApi.php/schedules/?scheduleName='+scheduleName,
   		success: function(data){
   			response = $.parseJSON(data);
+        console.log(response);
   			method(response);
   			}
   		});

@@ -18,7 +18,7 @@ $(document).ready(function () {
     });
 
     $( window ).resize(function() {
-      taskCollectionView.render();
+      renderSchedule();
     });
 
 });
@@ -30,6 +30,6 @@ function getSchedulesResults(){
 function populateSchedulesResults(schedules){
   $("#searchResults").empty();
   $.each(schedules,function(i,schedule){
-    $("#searchResults").append('<li class="list-group-item result" onclick="console.log(\''+schedule+'\')">'+schedule+'</a>')
+    $("#searchResults").append('<li class="list-group-item result" onclick="getScheduleFromServer(\''+schedule+'\')">'+schedule+'</a>')
   })
 }

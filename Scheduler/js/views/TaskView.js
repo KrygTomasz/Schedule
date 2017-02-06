@@ -10,7 +10,6 @@ var TaskView = Backbone.View.extend({
     var day = tableInst.dayToPixels(this.model.get("day"));
     var taskClass = "task well ";
 
-    console.log(this.model.get("title")+":"+this.model.get("hourStart"));
 
 
     var style = "margin-left: "+day+"px;"

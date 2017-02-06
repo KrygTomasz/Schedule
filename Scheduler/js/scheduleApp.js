@@ -1,14 +1,45 @@
+var taskCollection;
+function dbDataToModel(dbItem){
+  var title = dbItem['title'];
+  var timeStartStr = dbItem['timeStart'];
+  var spanStr = dbItem['timeSpan'];
+  var details = dbItem['details'];
+  var day = dbItem['day'];
+  var taskInst1 = new Task({"title":title, "timeStartStr":timeStartStr, "spanStr":spanStr, "details":details, "day":day});
+  return taskInst1;
+}
+
+function dbDataToCollection(dbData){
+  var taskCollection1 = new TaskCollection();
+  $.each(dbData,function(i,value){
+    taskCollection1.add(dbDataToModel(value));
+  });
+  taskCollection = taskCollection1;
+  renderSchedule();
+}
+
+
+function getScheduleFromServer(scheduleName){
+  apiClient.getScheduleByName(dbDataToCollection,scheduleName);
+}
+
+function renderSchedule(){
+  var taskCollectionView = new TaskCollectionView({el: "#taskContainter", collection: taskCollection} );
+  taskCollectionView.render();
+}
+
+
 var apiClient = new ApiClient('http://localhost');
 
 var tableInst = new TableModel({"startHour":7});
 
 
-var taskInst1 = new Task({"title":"Task 1", "timeStart":"7:00", "day": 0});
+var taskInst1 = new Task({"title":"Task 1", "timeStartStr":"7:00", "day": 0});
 var taskInst2 = new Task({"title":"Task 2", "hourStart" : 8, "timeSpan":1.75});
 var taskInst3 = new Task({"title":"Task 3", "hourStart" : 9 , "day":0});
 var taskInst4 = new Task({"title":"Task 4", "hourStart" : 11, "timeSpan":2.5, "day":2});
 var taskInst5 = new Task({"title":"Task 5", "hourStart" : 14 , "day":3});
-var taskInst6 = new Task({"title":"Task 6", "hourStart" : 12 , "day":4, "timeStart":"09:30"});
+var taskInst6 = new Task({"title":"Task 6", "hourStart" : 12 , "day":4, "timeStartStr":"09:30"});
 var taskInst7 = new Task({"title":"Task 7", "hourStart" : 13  , "timeSpan":2.5, "day":2});
 var taskInst8 = new Task({"title":"Task 8", "hourStart" : 8  , "timeSpan":0.5, "day":2});
 var taskInst9 = new Task({"title":"Task 9", "hourStart" : 6  , "timeSpan":0.5, "day":2});
