@@ -43,6 +43,37 @@ var TableModel = Backbone.Model.extend({
 
 		return pixels;
 
+	},
+	
+	spanToPixels: function(hourStart, minuteStart, timeSpan) {
+		
+		if(timeSpan == 0) return 0;
+		
+		var pixels = 0;
+		var tempSpan = timeSpan;
+		var tempRowNumber = hourStart*2 + Math.floor(minuteStart/30);
+		
+		var firstBlockPercentage = 0;
+		if (minuteStart > 30) {
+			firstBlockPercentage = 1 - (minuteStart - 30) / 30;
+		} else if (minuteStart > 0) {
+			firstBlockPercentage = 1 - minuteStart / 30;
+		}
+		
+		if(firstBlockPercentage != 0) {
+			tempSpan = tempSpan - firstBlockPercentage;
+			pixels += (parseFloat($("#row"+tempRowNumber+"").css("height")) * firstBlockPercentage);
+			tempRowNumber++;
+		}
+		
+		while(tempSpan>1) {
+			pixels += (parseFloat($("#row"+tempRowNumber+"").css("height")));
+			tempRowNumber += 1;
+			tempSpan -= 1;
+		}
+
+		pixels = pixels + (parseFloat($("#row"+tempRowNumber+"").css("height")) * tempSpan);
+		return pixels;
 	}
 
 });
